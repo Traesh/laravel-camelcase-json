@@ -1,13 +1,13 @@
 <?php
-namespace Grohiro\LaravelCamelCaseJson;
+namespace Traesh\UpperLaravelCamelCaseJson;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Routing\ResponseFactory as BaseResponseFactory;
 
 /**
- * Convert response JSON key to camelCase
+ * Convert response JSON key to UpperCamelCase
  */
-class CamelCaseJsonResponseFactory extends BaseResponseFactory
+class UpperCamelCaseJsonResponseFactory extends BaseResponseFactory
 {
     public function __construct($arg1, $arg2)
     {
@@ -52,7 +52,7 @@ class CamelCaseJsonResponseFactory extends BaseResponseFactory
     {
         $newArray = [];
         foreach ($array as $key => $val) {
-            $newArray[\camel_case($key)] = $this->encodeJson($val);
+            $newArray[\ucwords(\camel_case($key))] = $this->encodeJson($val);
         }
         return $newArray;
     }
