@@ -1,10 +1,10 @@
 <?php
-namespace Grohiro\LaravelCamelCaseJson;
+namespace Traesh\UpperLaravelCamelCaseJson;
 
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;
 
-class CamelCaseJsonResponseServiceProvider extends ServiceProvider
+class UpperCamelCaseJsonResponseServiceProvider extends ServiceProvider
 {
     /**
      * register()
@@ -14,7 +14,7 @@ class CamelCaseJsonResponseServiceProvider extends ServiceProvider
         $view = $this->app->make('view');
         $redirect = $this->app->make('redirect');
         $this->app->singleton(ResponseFactory::class, function () use ($view, $redirect) {
-            return new CamelCaseJsonResponseFactory($view, $redirect);
+            return new UpperCamelCaseJsonResponseFactory($view, $redirect);
         });
     }
 }
