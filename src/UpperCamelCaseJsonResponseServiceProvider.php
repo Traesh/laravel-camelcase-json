@@ -1,5 +1,5 @@
 <?php
-namespace Traesh\UpperLaravelCamelCaseJson;
+namespace Traesh\LaravelUpperCamelCaseJson;
 
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Support\ServiceProvider;
