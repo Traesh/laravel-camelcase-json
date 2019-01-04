@@ -1,6 +1,6 @@
-# laravel-camelcase-json
+# laravel-uppercamelcase-json
 
-Convert response JSON key to camelCase.
+Convert response JSON key to UpperCamelCase.
 
 ## Usage
 
@@ -8,7 +8,7 @@ Convert response JSON key to camelCase.
 
 ```php
 return response()->json($model);
-// => ['userName' => 'foo', 'userKey' => 'bar', ...]
+// => ['UserName' => 'foo', 'UserKey' => 'bar', ...]
 ```
 
 ## Requirements
@@ -18,7 +18,7 @@ return response()->json($model);
 ## Install 
 
 ```bash
-$ composer require 'grohiro/laravel-camelcase-json' '~1.0'
+$ composer require 'traesh/laravel-uppercamelcase-json' '~1.0'
 ```
 
 Add the service provider.
@@ -30,6 +30,6 @@ Add the service provider.
 	// default providers
 	// ...
 	
-	Grohiro\LaravelCamelCaseJson\CamelCaseJsonResponseServiceProvider::class,
+	Traesh\LaravelUpperCamelCaseJson\UpperCamelCaseJsonResponseServiceProvider::class,
 ],
 ```
