@@ -1,5 +1,5 @@
 <?php
-namespace Traesh\UpperLaravelCamelCaseJson;
+namespace Traesh\LaravelUpperCamelCaseJson;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Routing\ResponseFactory as BaseResponseFactory;
